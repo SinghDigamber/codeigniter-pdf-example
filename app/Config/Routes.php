@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // Route since we don't have to scan directories.
 
 $routes->get('/', 'PdfController::index');
+$routes->match(['get', 'post'], 'PdfController/htmlToPDF', 'PdfController::htmlToPDF');
 
 /**
  * --------------------------------------------------------------------
